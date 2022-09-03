@@ -7,3 +7,7 @@ to run the package use:
 ```
 ros2 launch holonomic launch_sim.launch.py
 ```
+The robot can be controlled by using keyboard with this command:
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
