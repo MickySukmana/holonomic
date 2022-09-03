@@ -3,9 +3,9 @@
 <package format="3">
   <name>holonomic</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="hibatullah.mickysukmana@gmail.com">vel</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Holonomic Robot Simulation</description>
+  <maintainer email="hibatullah.mickysukmana@gmail.com">Micky</maintainer>
+  <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
