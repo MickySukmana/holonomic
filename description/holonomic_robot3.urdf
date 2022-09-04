@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="holonomic_robot3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.065971 -0.034453 0.00052875"
+        rpy="0 0 0" />
+      <mass
+        value="0.029663" />
+      <inertia
+        ixx="2.3758E-05"
+        ixy="-3.5155E-21"
+        ixz="-2.2616E-23"
+        iyy="2.3758E-05"
+        iyz="1.4972E-21"
+        izz="4.7471E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="motor1_Link">
+    <inertial>
+      <origin
+        xyz="0.0012149 8.9994E-06 -0.014697"
+        rpy="0 0 0" />
+      <mass
+        value="0.027587" />
+      <inertia
+        ixx="2.5276E-06"
+        ixy="5.6421E-10"
+        ixz="-2.5995E-07"
+        iyy="4.8805E-06"
+        iyz="-3.1417E-09"
+        izz="4.8985E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.10447 -0.034453 -0.00097125"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel1_Link">
+    <inertial>
+      <origin
+        xyz="-3.0531E-16 1.7347E-17 0.0059184"
+        rpy="0 0 0" />
+      <mass
+        value="0.020334" />
+      <inertia
+        ixx="3.0819E-06"
+        ixy="8.6757E-22"
+        ixz="9.2629E-21"
+        iyy="3.0819E-06"
+        iyz="1.9171E-22"
+        izz="5.7754E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel1_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0305 0 -0.0165"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="motor1_Link" />
+    <child
+      link="wheel1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rubber1_Link">
+    <inertial>
+      <origin
+        xyz="-2.9837E-16 5.8981E-17 0.008"
+        rpy="0 0 0" />
+      <mass
+        value="0.025624" />
+      <inertia
+        ixx="8.1584E-07"
+        ixy="2.7512E-21"
+        ixz="3.9264E-22"
+        iyy="8.1584E-07"
+        iyz="6.7285E-24"
+        izz="9.417E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rubber1_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="wheel1_Link" />
+    <child
+      link="rubber1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor2_Link">
+    <inertial>
+      <origin
+        xyz="-0.0012149 -8.9994E-06 -0.014697"
+        rpy="0 0 0" />
+      <mass
+        value="0.027587" />
+      <inertia
+        ixx="2.5276E-06"
+        ixy="5.6421E-10"
+        ixz="2.5995E-07"
+        iyy="4.8805E-06"
+        iyz="3.1417E-09"
+        izz="4.8985E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor2_joint"
+    type="fixed">
+    <origin
+      xyz="-0.027471 -0.034453 -0.00097125"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel2_Link">
+    <inertial>
+      <origin
+        xyz="8.3267E-17 1.0408E-17 0.0059184"
+        rpy="0 0 0" />
+      <mass
+        value="0.020334" />
+      <inertia
+        ixx="3.0819E-06"
+        ixy="1.4617E-22"
+        ixz="-8.1538E-21"
+        iyy="3.0819E-06"
+        iyz="-1.6374E-22"
+        izz="5.7754E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel2_joint"
+    type="continuous">
+    <origin
+      xyz="0.0305 0 -0.0165"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="motor2_Link" />
+    <child
+      link="wheel2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rubber2_Link">
+    <inertial>
+      <origin
+        xyz="2.0817E-17 -1.0408E-17 0.008"
+        rpy="0 0 0" />
+      <mass
+        value="0.025624" />
+      <inertia
+        ixx="8.1584E-07"
+        ixy="-1.8496E-21"
+        ixz="-4.4163E-22"
+        iyy="8.1584E-07"
+        iyz="2.1291E-24"
+        izz="9.417E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rubber2_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="wheel2_Link" />
+    <child
+      link="rubber2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor3_Link">
+    <inertial>
+      <origin
+        xyz="8.9994E-06 -0.0012149 -0.014697"
+        rpy="0 0 0" />
+      <mass
+        value="0.027587" />
+      <inertia
+        ixx="4.8805E-06"
+        ixy="-5.6421E-10"
+        ixz="-3.1417E-09"
+        iyy="2.5276E-06"
+        iyz="2.5995E-07"
+        izz="4.8985E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor3_joint"
+    type="fixed">
+    <origin
+      xyz="-0.065971 0.0040471 -0.00097125"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel3_Link">
+    <inertial>
+      <origin
+        xyz="-3.3307E-16 -1.36E-15 0.0059184"
+        rpy="0 0 0" />
+      <mass
+        value="0.020334" />
+      <inertia
+        ixx="3.0819E-06"
+        ixy="8.2017E-13"
+        ixz="-6.1659E-21"
+        iyy="3.0819E-06"
+        iyz="8.252E-21"
+        izz="5.7754E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel3_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0305 -0.0165"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="motor3_Link" />
+    <child
+      link="wheel3_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rubber3_Link">
+    <inertial>
+      <origin
+        xyz="-4.1633E-16 -1.3739E-15 0.008"
+        rpy="0 0 0" />
+      <mass
+        value="0.025624" />
+      <inertia
+        ixx="8.1584E-07"
+        ixy="8.5348E-21"
+        ixz="-3.0657E-22"
+        iyy="8.1584E-07"
+        iyz="3.663E-22"
+        izz="9.417E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rubber3_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="wheel3_Link" />
+    <child
+      link="rubber3_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="motor4_Link">
+    <inertial>
+      <origin
+        xyz="-8.9994E-06 0.0012149 -0.014697"
+        rpy="0 0 0" />
+      <mass
+        value="0.027587" />
+      <inertia
+        ixx="4.8805E-06"
+        ixy="-5.6421E-10"
+        ixz="3.1417E-09"
+        iyy="2.5276E-06"
+        iyz="-2.5995E-07"
+        izz="4.8985E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/motor4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor4_joint"
+    type="fixed">
+    <origin
+      xyz="-0.065971 -0.072953 -0.00097125"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel4_Link">
+    <inertial>
+      <origin
+        xyz="6.5226E-16 -3.1225E-17 0.0059184"
+        rpy="0 0 0" />
+      <mass
+        value="0.020334" />
+      <inertia
+        ixx="3.0819E-06"
+        ixy="9.4476E-22"
+        ixz="1.9557E-20"
+        iyy="3.0819E-06"
+        iyz="1.2749E-22"
+        izz="5.7754E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/wheel4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel4_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0305 -0.0165"
+      rpy="1.5708 0 0" />
+    <parent
+      link="motor4_Link" />
+    <child
+      link="wheel4_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rubber4_Link">
+    <inertial>
+      <origin
+        xyz="6.245E-16 -5.2042E-17 0.008"
+        rpy="0 0 0" />
+      <mass
+        value="0.025624" />
+      <inertia
+        ixx="8.1584E-07"
+        ixy="-1.0418E-20"
+        ixz="1.3067E-21"
+        iyy="8.1584E-07"
+        iyz="-3.0399E-23"
+        izz="9.417E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://holonomic_robot3/meshes/rubber4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rubber4_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="wheel4_Link" />
+    <child
+      link="rubber4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
