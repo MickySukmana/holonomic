@@ -22,3 +22,5 @@ and uncomment this line:
 ```
 <xacro:include filename="robot_core_highres.xacro"/>
 ```
+![alt text](https://github.com/MickySukmana/holonomic/blob/main/img/lr_model.png?raw=true)
+![alt text](https://github.com/MickySukmana/holonomic/blob/main/img/hr_model.png?raw=true)
